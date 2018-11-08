@@ -1,0 +1,21 @@
+import time
+import numpy as np
+
+a = np.random.rand(1000000)
+b = np.random.rand(1000000)
+
+tic = time.time()
+z = np.dot(a,b)
+toc = time.time()
+
+print(str(1000*(toc-tic)))
+print(z)
+
+g=0
+tic = time.time()
+for i in range(1000000):
+    g += a[i]*b[i]
+toc = time.time()
+
+print(str(1000*(toc-tic)))
+print(g)
