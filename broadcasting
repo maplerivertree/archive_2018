@@ -6,7 +6,7 @@ A = np.array([[56.0, 0.0, 4.4, 68.0],
 
 print(A)
 
-cal = A.sum(axis=0)
+cal = A.sum(axis=0) #axis=0 is vertically, axis=1 is horizontally
 print(cal)
 
 percentage = 100*A/cal.reshape(1,4)
