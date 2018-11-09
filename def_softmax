@@ -1,0 +1,13 @@
+
+
+import numpy as np
+a = np.array([[9,2,5,0,0],[7,5,0,0,0]])
+assert a.shape == (2,5)
+
+def softmax(input):
+    ex_input = np.exp(input)
+    sum_row_input = np.sum(ex_input, axis = 1, keepdims = True)
+    softmax_input = ex_input/sum_row_input
+    return softmax_input
+
+print(softmax(a)
