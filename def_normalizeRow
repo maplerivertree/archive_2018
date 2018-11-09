@@ -1,0 +1,11 @@
+import numpy as np
+
+a = np.array([[0,3,4], [2,6,4]])
+print(a.shape)
+
+def normalizeRow(input):
+    f = np.linalg.norm(input,axis = 1, keepdims = True)
+    input = input/f
+    return input
+    
+print(normalizeRow(a))
